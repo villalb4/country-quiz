@@ -1,4 +1,4 @@
-import { setQuestion, setCountrys } from "../slice/question";
+import { setQuestion } from "../slice/question";
 
 export const getCountrys = () => {
   return async(dispatch, getState) => {
@@ -12,14 +12,10 @@ export const getCountrys = () => {
         id: i,
         name: e.name.common,
         capital: e.capital,
-        flag: e.flags
+        flag: e.flags.svg
       }
     })
 
-    //obtener random index
-    const index = Math.floor(Math.random() * response.length)
-
-    dispatch(setCountrys(dataFilter))
-    dispatch(setQuestion(index))
+    dispatch(setQuestion(dataFilter))
   }
 }
