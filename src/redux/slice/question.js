@@ -1,35 +1,39 @@
-import { createSlice, current } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  countrys: [],
-  quesiton: {}
+  question: {}
 }
 
 export const questionSlice = createSlice({
   name: 'question',
   initialState ,
   reducers: {
-    setCountrys: function(state, action) {
-      state.countrys = action.payload
-    },
     setQuestion: function(state, action) {
-      // obetener pais para crear la pregunta
-      const index = action.payload
-      const country = current(state.countrys[index])
+      const countrys = action.payload
 
       // generar tipo de pregunta
       const typeQuestion = ["flag", "capital"][Math.floor(Math.random() * 2)]
 
-      // obetener 3 paises mas para la pregunta
+      // obetener las 4 opciones
+      const random = [...countrys].sort(() => Math.random() - 0.5) // mezcla el array
+      const options = [0,1,2,3].map(e => random[e]).sort(() => Math.random() - 0.5) //obtiene 4 al azar
+      const letters = ["A", "B", "C", "D"]
 
-      // const others = [0, 1, 2].map(e => current(state.countrys[e])).sort(() => Math.random() - 0.5)
-      // console.log(others)
-
-      // const others = 
-
+      const question = typeQuestion === "flag" 
+        ? "Which country does this flag belong to?" 
+        : `${options[0].capital[0]} is the capital of`
+      
+      state.question = {
+        type: typeQuestion,
+        question: question,
+        letters: letters,
+        options: options,
+        correct: options[0],
+        flag: options[0].flag
+      }
     }
   }
 })
 
-export const { setQuestion, setCountrys } = questionSlice.actions
+export const { setQuestion } = questionSlice.actions
 export default questionSlice.reducer
