@@ -1,0 +1,42 @@
+.Options {
+  padding-bottom: 32px;
+}
+.Options_divOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+}
+.Options_divOption {
+  display: flex;
+  align-items: center;
+  gap: 46px;
+  background: #FFFFFF;
+  border: 2px solid rgba(96, 102, 208, 0.7);
+  border-radius: 12px;
+  padding: 10px 19px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.Options_divOption:hover {
+  border: 2px solid #F9A826;
+  background: #F9A826;
+}
+.Options_divLetter {
+  width: 19px;
+}
+.Options_letter {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: rgba(96, 102, 208, 0.8);
+}
+.Options_option {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: rgba(96, 102, 208, 0.8);
+  max-width: 262px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
