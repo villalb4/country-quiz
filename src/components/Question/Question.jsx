@@ -9,31 +9,18 @@ function Question() {
 
   return (
     <div className='Question'>
-      {data ? 
-        <div className='Question_divData'>
-          <div className='Question_divQuestion'>
-            {
-              data?.type === "capital" 
-                ? <div><p className='Question_question'>{data?.question}</p></div>
-                : <div>
-                    <div className='Question_divFlag'><img src={data.flag} alt="" /></div>
-                    <div><p className='Question_question'>{data?.question}</p></div>
-                  </div>
-            }
-          </div>
-          <div className='Question_divOptions'>
-            {data?.options?.map((e, i) => {
-              return <div key={i} className="Question_divOption">
-                <div className='Question_divLetter'>
-                  <span className='Question_letter'>{data.letters[i]}</span>
+      <div className='Question_divData'>
+        <div className='Question_divQuestion'>
+          {
+            data?.type === "capital" 
+              ? <div><p className='Question_question'>{data?.question}</p></div>
+              : <div>
+                  <div className='Question_divFlag'><img src={data.flag} alt="" /></div>
+                  <div><p className='Question_question'>{data?.question}</p></div>
                 </div>
-                <p className='Question_option'>{e.name}</p>
-              </div>
-            })}
-          </div>
-        </div> 
-        : "cargando"
-      }
+          }
+        </div>
+      </div>
     </div>
   )
 }
