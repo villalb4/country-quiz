@@ -2,6 +2,7 @@
 
 .App {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-image: url("https://raw.githubusercontent.com/villalb4/country-quiz/main/src/assets/background.png");
