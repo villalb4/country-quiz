@@ -1,6 +1,9 @@
 .Home {
-  display: flex;
-  flex-direction: column;
+  padding: 188px 0 29px 0;
+}
+.Home_divContent {
+  margin: 0 auto;
+  max-width: 464px;
 }
 h1 {
   font-weight: 700;
