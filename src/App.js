@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import './App.css';
-import Home from './views/Home';
+import Game from './views/Game/Game';
 import { useDispatch } from 'react-redux';
 import { getCountrys } from './redux/thunk/getCountrys';
 
@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="App">
-      <Home />
+      <Game />
     </div>
   );
 }
