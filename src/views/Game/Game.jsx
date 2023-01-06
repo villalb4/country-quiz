@@ -1,6 +1,6 @@
-import './Home.css';
-import Quiz from '../components/Quiz/Quiz';
-import CreatedBy from '../components/CreatedBy/CreatedBy';
+import './Game.css';
+import Quiz from '../../components/Quiz/Quiz';
+import CreatedBy from '../../components/CreatedBy/CreatedBy';
 
 function Home() {
   return (
