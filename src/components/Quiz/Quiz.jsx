@@ -14,7 +14,7 @@ function Quiz() {
   const played = useSelector(e => e.play.played)
 
   const handleNext = () => {
-    dispatch(next())
+    dispatch(next(pased))
     dispatch(getCountrys())
   }
 
@@ -25,7 +25,7 @@ function Quiz() {
       </div>
       <Question />
       <Options />
-      <div className={pased === true && played === true ? 'Quiz_bottom' : 'Quiz_bottom desactive'}>
+      <div className={played === true ? 'Quiz_bottom' : 'Quiz_bottom desactive'}>
         <button onClick={handleNext}>Next</button>
       </div>
     </div>
