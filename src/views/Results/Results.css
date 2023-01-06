@@ -52,6 +52,6 @@ h2 {
   transition: all ease 0.3s;
 }
 .Results_divButton > button:hover {
-  border: 2px solid #517bc3;
-  color: #517bc3;
+  background-color: #1D355D;
+  color: #ffffff;
 }
