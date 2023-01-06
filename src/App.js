@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import './App.css';
 import Game from './views/Game/Game';
-import { useDispatch } from 'react-redux';
+import Results from './views/Results/Results';
+import { useDispatch, useSelector } from 'react-redux';
 import { getCountrys } from './redux/thunk/getCountrys';
 
 function App() {
@@ -12,9 +13,15 @@ function App() {
     dispatch(getCountrys())
   })
 
+  const pased = useSelector(e => e.play.pased)
+
   return (
     <div className="App">
-      <Game />
+      {
+        pased === null || pased === true
+        ? <div className='App_divGame'><Game /></div>
+        : <div className='App_divResults'><Results /></div>
+      }
     </div>
   );
 }
