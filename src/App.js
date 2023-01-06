@@ -11,14 +11,14 @@ function App() {
 
   useEffect(() => {
     dispatch(getCountrys())
-  })
+  }, [dispatch])
 
-  const pased = useSelector(e => e.play.pased)
+  const gameOver = useSelector(e => e.play.gameOver)
 
   return (
     <div className="App">
       {
-        pased === null || pased === true
+        gameOver === false
         ? <div className='App_divGame'><Game /></div>
         : <div className='App_divResults'><Results /></div>
       }
