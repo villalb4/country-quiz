@@ -9,6 +9,7 @@
 .Options_divOption {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 46px;
   background: #FFFFFF;
   border: 2px solid rgba(96, 102, 208, 0.7);
@@ -21,8 +22,15 @@
   border: 2px solid #F9A826;
   background: #F9A826;
 }
+.Options_div{
+  display: flex;
+  align-items: center;
+  gap: 44px;
+  pointer-events: none;
+}
 .Options_divLetter {
   width: 19px;
+  pointer-events: none;
 }
 .Options_letter {
   font-weight: 500;
@@ -39,4 +47,9 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+.Options_divIconResult {
+  height: 20px;
+  pointer-events: none;
 }

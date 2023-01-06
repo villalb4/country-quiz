@@ -16,7 +16,7 @@ export const questionSlice = createSlice({
 
       // obetener las 4 opciones
       const random = [...countrys].sort(() => Math.random() - 0.5) // mezcla el array
-      const options = [0,1,2,3].map(e => random[e]).sort(() => Math.random() - 0.5) //obtiene 4 al azar
+      const options = [0,1,2,3].map(e => random[e]).sort(() => Math.random() - 0.5)
       const letters = ["A", "B", "C", "D"]
 
       const question = typeQuestion === "flag" 
@@ -28,8 +28,8 @@ export const questionSlice = createSlice({
         question: question,
         letters: letters,
         options: options,
-        correct: options[0],
-        flag: options[0].flag
+        correct: random[0],
+        flag: random[0].flag
       }
     }
   }
