@@ -3,7 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   pased: null,
   played: false,
-  score: 0
+  gameOver: false,
+  score: 0,
 }
 
 export const playSlice = createSlice({
@@ -17,11 +18,12 @@ export const playSlice = createSlice({
     next: function(state, action) {
       state.pased = null
       state.played = false
-      state.score = state.score + 1
+      action.payload === false ? state.gameOver = true : state.score = state.score + 1
     },
     restart: function(state, action) {
       state.pased = null
       state.played = false
+      state.gameOver = false
       state.score = 0
     }
   }
