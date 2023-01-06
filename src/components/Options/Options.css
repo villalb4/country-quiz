@@ -62,7 +62,19 @@
   overflow: hidden;
 }
 
+.Options_iconCheck {
+  display: none;
+}
+.Options_iconCancel {
+  display: none;
+}
 .Options_divIconResult {
   height: 20px;
   pointer-events: none;
+}
+.Options_divIconResult.correct > .Options_iconCheck {
+  display: block;
+}
+.Options_divIconResult.incorrect > .Options_iconCancel {
+  display: block;
 }
