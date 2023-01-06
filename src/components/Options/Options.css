@@ -10,9 +10,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 46px;
-  background: #FFFFFF;
-  border: 2px solid rgba(96, 102, 208, 0.7);
+  background-color: #FFFFFF;
+  border: 2px solid #6066d0b3;
   border-radius: 12px;
   padding: 10px 19px;
   cursor: pointer;
@@ -20,8 +19,22 @@
 }
 .Options_divOption:hover {
   border: 2px solid #F9A826;
-  background: #F9A826;
+  background-color: #F9A826;
 }
+.Options_divOption.correct {
+  border: 2px solid #60BF88;
+  background-color: #60BF88;
+  pointer-events: none;
+}
+.Options_divOption.incorrect {
+  border: 2px solid #EA8282;
+  background-color: #EA8282;
+  pointer-events: none;
+}
+.Options_divOption.played {
+  pointer-events: none;
+}
+
 .Options_div{
   display: flex;
   align-items: center;
